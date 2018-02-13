@@ -14,6 +14,12 @@ game.createScene('Main', {
         this.player = new game.Player();
         this.player.addTo(this.stage);
         this.player.setPosition(game.width/2, groundY);
+        
+        var text = new game.SystemText(
+            "Use arrow keys to move Betty", 
+            {color: '#000', size:20, x:10, y:10}
+        );
+        text.addTo(this.stage);
     },
     
     update: function() {
@@ -26,9 +32,13 @@ game.createScene('Main', {
         else {
             this.player.stand();
         }
+        if(game.input.touches.length)
+        {
+            console.log(game.input.touches);
+        }
     },
 
-    makeFloor() {
+    makeFloor: function() {
         for(var i=0; i<5; i++) {
             var floor = new game.Sprite("floor.png");
             floor.addTo(this.stage);
