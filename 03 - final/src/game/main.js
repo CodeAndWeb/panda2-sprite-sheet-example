@@ -3,7 +3,7 @@ game.module(
 )
 .body(function() {
 
-game.addAsset('player.atlas');
+game.addAsset('betty.atlas');
 
 game.createScene('Main', {
     init: function() {
@@ -27,7 +27,7 @@ game.createScene('Main', {
             this.player.stand();
         }
     },
-    
+
     makeFloor() {
         for(var i=0; i<5; i++) {
             var floor = new game.Sprite("floor.png");
@@ -42,11 +42,8 @@ game.createScene('Main', {
 game.createClass('Player', {
     init: function() {
         this.sprite = game.Animation.fromTextures('right/');
-        this.sprite.anims.run_right = this.sprite;
-        this.sprite.anims.run_left = game.Animation.fromTextures('left/');
-        this.sprite.anims.stand_right = game.Animation.fromTextures('stand/right');
-        this.sprite.anims.stand_left = game.Animation.fromTextures('stand/left');
-        this.sprite.play();
+        this.sprite.anims.run = this.sprite;
+        this.sprite.anims.stand = game.Animation.fromTextures('stand/right');
 
         this.direction = 1;
     },
@@ -60,20 +57,20 @@ game.createClass('Player', {
     },
     
     run: function(direction) {
+        this.direction = direction;
         var speed = 400;
         this.sprite.x += direction * speed * game.delta;
-        this.changeAnimation('run', direction);
+        this.changeAnimation('run');
     },
     
     stand: function() {
-        this.changeAnimation('stand', this.direction);  
+        this.changeAnimation('stand');  
     },
     
-    changeAnimation: function(action, direction) {
-        this.direction = direction;
-        var anim = action+"_"+((this.direction == 1) ? 'right' : 'left') ;
-        if (this.sprite.currentAnim === this.sprite.anims[anim]) return;
-        this.sprite.play(anim);
+    changeAnimation: function(action) {
+        this.sprite.scale.x = this.direction;
+        if (this.sprite.currentAnim === this.sprite.anims[action]) return;
+        this.sprite.play(action);
     }
 });
 

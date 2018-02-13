@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>4.6.2</string>
         <key>fileName</key>
-        <string>/Users/sk/Programming/_test_and_tutorials/panda-sprite-sheets/01 - start/spritesheets/betty.tps</string>
+        <string>/Users/sk/Programming/_test_and_tutorials/panda-sprite-sheets/03 - final/spritesheets/betty.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -212,14 +212,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">betty/jump/left.png</key>
             <key type="filename">betty/jump/right.png</key>
-            <key type="filename">betty/left/01.png</key>
-            <key type="filename">betty/left/02.png</key>
-            <key type="filename">betty/left/03.png</key>
-            <key type="filename">betty/left/04.png</key>
-            <key type="filename">betty/left/05.png</key>
-            <key type="filename">betty/left/06.png</key>
             <key type="filename">betty/right/01.png</key>
             <key type="filename">betty/right/03.png</key>
             <key type="filename">betty/right/04.png</key>
@@ -237,7 +230,6 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">betty/stand/left.png</key>
             <key type="filename">betty/stand/right.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>

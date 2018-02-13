@@ -225,11 +225,23 @@
             <key type="filename">betty/right/04.png</key>
             <key type="filename">betty/right/05.png</key>
             <key type="filename">betty/right/06.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,1</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,64,128,128</rect>
+                <key>scale9Paddings</key>
+                <rect>64,64,128,128</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">betty/stand/left.png</key>
             <key type="filename">betty/stand/right.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,1</point_f>
+                <point_f>0.5,0.964844</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
